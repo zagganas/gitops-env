@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gitops-app-deployment
   labels:
     app: gitops-app
+  name: gitops-app-deployment
 spec:
   replicas: 3
   selector:
@@ -15,7 +15,7 @@ spec:
         app: gitops-app
     spec:
       containers:
-      - name: app
-        image: <image-name>:<tag>
+      - image: zagganas/gitops-app:20220622.153303
+        name: gitops-app
         ports:
         - containerPort: 8080
