@@ -2,11 +2,13 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: applications
+  name: gitops-app
   namespace: gitops-app
 spec:
   interval: 30s
   ref:
     branch: main
   url: ssh://git@github.com/zagganas/gitops-env
+  secretRef:
+    name: applications
 
