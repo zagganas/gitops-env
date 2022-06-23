@@ -16,7 +16,7 @@ spec:
         app: gitops-app
     spec:
       containers:
-      - image: zagganas/gitops-app:20220623.092652
+      - image: zagganas/gitops-app:20220623.093202
         name: gitops-app
         ports:
         - containerPort: 8080
